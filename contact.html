@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Mabasa PA Attorneys</title>
+<meta name="description" content="Contact Mabasa PA Attorneys in Giyani for trusted legal advice and professional representation.">
+<link rel="canonical" href="https://mabasapaattorneys.co.za/contact.html">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mabasapaattorneys.co.za/contact.html">
+<meta property="og:title" content="Contact Mabasa PA Attorneys">
+<meta property="og:description" content="Get in touch with Mabasa PA Attorneys for expert legal assistance.">
+<meta property="og:image" content="https://mabasapaattorneys.co.za/images/mabasa.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Mabasa PA Attorneys">
+<meta name="twitter:description" content="Speak to our legal team today.">
+<meta name="twitter:image" content="https://mabasapaattorneys.co.za/images/mabasa.jpg">
+
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-sans { font-family: 'Inter', sans-serif; }
+    
+    .bg-pattern {
+      background-image: 
+        linear-gradient(30deg, rgba(18, 30, 48, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(18, 30, 48, 0.05) 87.5%, rgba(18, 30, 48, 0.05)),
+        linear-gradient(150deg, rgba(18, 30, 48, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(18, 30, 48, 0.05) 87.5%, rgba(18, 30, 48, 0.05)),
+        linear-gradient(30deg, rgba(18, 30, 48, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(18, 30, 48, 0.05) 87.5%, rgba(18, 30, 48, 0.05)),
+        linear-gradient(150deg, rgba(18, 30, 48, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(18, 30, 48, 0.05) 87.5%, rgba(18, 30, 48, 0.05));
+      background-size: 80px 140px;
+      background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+    }
+    
+    .btn-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .btn-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 280px;
+      height: 100%;
+      background: white;
+      z-index: 1000;
+      transition: left 0.3s ease;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .sidebar.open {
+      left: 0;
+    }
+    
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .sidebar-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: currentColor;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      transform: translateY(-2px);
+    }
+    
+    .nav-link {
+      transition: all 0.3s ease;
+    }
+
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 16px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1000;
+      transform: translateX(400px);
+      transition: transform 0.3s ease;
+    }
+
+    .toast.show {
+      transform: translateX(0);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-sans">
+  <div id="app" class="w-full h-full overflow-auto"></div>
+  <script>
+    const defaultConfig = {
+      background_color: "#f8f7f4",
+      surface_color: "#ffffff",
+      text_color: "#1a1a1a",
+      primary_action_color: "#1e3a5f",
+      secondary_action_color: "#d4af37",
+      font_family: "Inter",
+      font_size: 16,
+      firm_name: "Mabasa PA Attorneys",
+      page_title: "Get In Touch",
+      page_subtitle: "We're here to help with your legal needs. Contact us today for a consultation.",
+      contact_phone: "015 3305341",
+      contact_mobile: "073 636 3603",
+      contact_whatsapp: "2773 636 3603",
+      contact_email: "info@mabasapaattorneys.co.za",
+      contact_address: "Office 211, 2nd Floor, Old Mutual Building, Giyani 0826",
+      office_hours: "Monday - Friday: 8:00 AM - 5:00 PM"
+    };
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'Inter, sans-serif';
+      const serifFontStack = 'Playfair Display, serif';
+      const baseSize = config.font_size || defaultConfig.font_size;
+      
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const accentColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      const app = document.getElementById('app');
+      app.style.backgroundColor = backgroundColor;
+      app.style.color = textColor;
+      
+      app.innerHTML = `
+        <!-- Mobile Sidebar Overlay -->
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        
+        <!-- Mobile Sidebar -->
+        <div id="sidebar" class="sidebar" style="background-color: ${surfaceColor};">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+              <div class="flex items-center space-x-3">
+                <svg width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="4" fill="${primaryColor}"/>
+                  <path d="M12 28V12L20 18L28 12V28H12Z" fill="${accentColor}"/>
+                  <circle cx="20" cy="20" r="3" fill="${surfaceColor}"/>
+                </svg>
+                <span style="color: ${primaryColor}; font-family: ${customFont}, ${serifFontStack}; font-size: ${baseSize * 1.2}px;" class="font-bold">Menu</span>
+              </div>
+              <button id="closeSidebar" style="color: ${textColor};" class="text-2xl">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            
+            <nav class="space-y-4">
+              <a href="index.html" class="sidebar-link flex items-center space-x-3 p-3 rounded hover:bg-gray-100" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;">
+                <i class="fas fa-home w-5"></i>
+                <span>Home</span>
+              </a>
+              <a href="about.html" class="sidebar-link flex items-center space-x-3 p-3 rounded hover:bg-gray-100" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;">
+                <i class="fas fa-info-circle w-5"></i>
+                <span>About</span>
+              </a>
+              <a href="services.html" class="sidebar-link flex items-center space-x-3 p-3 rounded hover:bg-gray-100" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;">
+                <i class="fas fa-briefcase w-5"></i>
+                <span>Services</span>
+              </a>
+              <a href="index.html#team" class="sidebar-link flex items-center space-x-3 p-3 rounded hover:bg-gray-100" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;">
+                <i class="fas fa-users w-5"></i>
+                <span>Team</span>
+              </a>
+              <a href="contact.html" class="sidebar-link flex items-center space-x-3 p-3 rounded hover:bg-gray-100" style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px; font-weight: 600;">
+                <i class="fas fa-envelope w-5"></i>
+                <span>Contact</span>
+              </a>
+            </nav>
+            
+            <div class="mt-8 pt-8 border-t">
+              <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;" class="mb-3 font-semibold">Contact Us</p>
+              <div class="space-y-2" style="font-size: ${baseSize * 0.85}px;">
+                <p style="color: ${textColor};"><i class="fas fa-phone mr-2"></i>${config.contact_phone || defaultConfig.contact_phone}</p>
+                <p style="color: ${textColor};"><i class="fas fa-mobile-alt mr-2"></i>${config.contact_mobile || defaultConfig.contact_mobile}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav style="background-color: ${surfaceColor}; border-bottom: 1px solid rgba(0,0,0,0.1);" class="sticky top-0 z-50 shadow-sm">
+          <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+              <a href="index.html" class="flex items-center space-x-3">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="4" fill="${primaryColor}"/>
+                  <path d="M12 28V12L20 18L28 12V28H12Z" fill="${accentColor}"/>
+                  <circle cx="20" cy="20" r="3" fill="${surfaceColor}"/>
+                </svg>
+                <span style="color: ${primaryColor}; font-family: ${customFont}, ${serifFontStack}; font-size: ${baseSize * 1.5}px;" class="font-bold">${config.firm_name || defaultConfig.firm_name}</span>
+              </a>
+              <div class="hidden md:flex space-x-8" style="font-size: ${baseSize * 0.95}px;">
+                <a href="about.html" style="color: ${textColor};" class="nav-link relative font-medium">About</a>
+                <a href="services.html" style="color: ${textColor};" class="nav-link relative font-medium">Services</a>
+                <a href="index.html#team" style="color: ${textColor};" class="nav-link relative font-medium">Team</a>
+                <a href="contact.html" style="color: ${primaryColor};" class="nav-link relative font-bold">Contact</a>
+              </div>
+              <button id="openSidebar" class="md:hidden" style="color: ${primaryColor}; font-size: ${baseSize * 1.5}px;">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Page Header -->
+        <section style="background-color: ${primaryColor};" class="py-20 bg-pattern relative overflow-hidden">
+          <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&q=80" alt="Contact Header" class="w-full h-full object-cover opacity-10">
+          </div>
+          <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <h1 style="color: ${surfaceColor}; font-family: ${customFont}, ${serifFontStack}; font-size: ${baseSize * 3}px;" class="font-bold mb-4">
+              ${config.page_title || defaultConfig.page_title}
+            </h1>
+            <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.25}px;" class="max-w-3xl mx-auto opacity-90">
+              ${config.page_subtitle || defaultConfig.page_subtitle}
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact Methods Section -->
+        <section class="py-20">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+              <!-- Phone -->
+              <div style="background-color: ${surfaceColor}; border: 1px solid rgba(0,0,0,0.1);" class="p-8 rounded-lg text-center card-hover scroll-reveal">
+                <div style="background-color: ${primaryColor}; width: 80px; height: 80px;" class="mx-auto rounded-full flex items-center justify-center mb-6">
+                  <i class="fas fa-phone" style="color: ${accentColor}; font-size: ${baseSize * 2}px;"></i>
+                </div>
+                <h3 style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.4}px;" class="font-bold mb-4">
+                  Call Us
+                </h3>
+                <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px;" class="mb-2">
+                  ${config.contact_phone || defaultConfig.contact_phone}
+                </p>
+                <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px;" class="mb-4">
+                  ${config.contact_mobile || defaultConfig.contact_mobile}
+                </p>
+                <a href="tel:${config.contact_phone || defaultConfig.contact_phone}" style="color: ${accentColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="font-semibold hover:underline">
+                  Call Now →
+                </a>
+              </div>
+
+              <!-- Email -->
+              <div style="background-color: ${surfaceColor}; border: 1px solid rgba(0,0,0,0.1);" class="p-8 rounded-lg text-center card-hover scroll-reveal">
+                <div style="background-color: ${primaryColor}; width: 80px; height: 80px;" class="mx-auto rounded-full flex items-center justify-center mb-6">
+                  <i class="fas fa-envelope" style="color: ${accentColor}; font-size: ${baseSize * 2}px;"></i>
+                </div>
+                <h3 style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.4}px;" class="font-bold mb-4">
+                  Email Us
+                </h3>
+                <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.05}px;" class="mb-4 break-all">
+                  ${config.contact_email || defaultConfig.contact_email}
+                </p>
+                <a href="mailto:${config.contact_email || defaultConfig.contact_email}" style="color: ${accentColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="font-semibold hover:underline">
+                  Send Email →
+                </a>
+              </div>
+
+              <!-- WhatsApp -->
+              <div style="background-color: ${surfaceColor}; border: 1px solid rgba(0,0,0,0.1);" class="p-8 rounded-lg text-center card-hover scroll-reveal">
+                <div style="background-color: ${primaryColor}; width: 80px; height: 80px;" class="mx-auto rounded-full flex items-center justify-center mb-6">
+                  <i class="fab fa-whatsapp" style="color: ${accentColor}; font-size: ${baseSize * 2}px;"></i>
+                </div>
+                <h3 style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.4}px;" class="font-bold mb-4">
+                  WhatsApp
+                </h3>
+                <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px;" class="mb-4">
+                  Chat with us instantly
+                </p>
+                <a href="https://wa.me/${config.contact_whatsapp || defaultConfig.contact_whatsapp}" target="_blank" rel="noopener noreferrer" style="color: ${accentColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="font-semibold hover:underline">
+                  Start Chat →
+                </a>
+              </div>
+            </div>
+
+            <!-- Main Contact Section -->
+            <div class="grid md:grid-cols-2 gap-12">
+              <!-- Contact Form -->
+              <div class="scroll-reveal">
+                <h2 style="color: ${primaryColor}; font-family: ${customFont}, ${serifFontStack}; font-size: ${baseSize * 2}px;" class="font-bold mb-6">
+                  Send Us a Message
+                </h2>
+                <form id="contactForm" style="background-color: ${surfaceColor}; border: 1px solid rgba(0,0,0,0.1);" class="p-8 rounded-lg shadow-lg">
+                  <div class="mb-6">
+                    <label for="name" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="block mb-2 font-semibold">
+                      Full Name *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required
+                      style="width: 100%; padding: 12px; border: 2px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px; color: ${textColor};"
+                      placeholder="Enter your full name"
+                    >
+                  </div>
+
+                  <div class="mb-6">
+                    <label for="email" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="block mb-2 font-semibold">
+                      Email Address *
+                    </label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required
+                      style="width: 100%; padding: 12px; border: 2px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px; color: ${textColor};"
+                      placeholder="your.email@example.com"
+                    >
+                  </div>
+
+                  <div class="mb-6">
+                    <label for="phone" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="block mb-2 font-semibold">
+                      Phone Number
+                    </label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone"
+                      style="width: 100%; padding: 12px; border: 2px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px; color: ${textColor};"
+                      placeholder="Your phone number"
+                    >
+                  </div>
+
+                  <div class="mb-6">
+                    <label for="subject" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="block mb-2 font-semibold">
+                      Subject *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="subject" 
+                      name="subject" 
+                      required
+                      style="width: 100%; padding: 12px; border: 2px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px; color: ${textColor};"
+                      placeholder="What can we help you with?"
+                    >
+                  </div>
+
+                  <div class="mb-6">
+                    <label for="message" style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px;" class="block mb-2 font-semibold">
+                      Message *
+                    </label>
+                    <textarea 
+                      id="message" 
+                      name="message" 
+                      rows="5" 
+                      required
+                      style="width: 100%; padding: 12px; border: 2px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px; color: ${textColor}; resize: vertical;"
+                      placeholder="Tell us about your legal needs..."
+                    ></textarea>
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    id="submitBtn"
+                    style="background-color: ${primaryColor}; color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px; width: 100%; padding: 14px; border-radius: 8px; border: none; cursor: pointer;"
+                    class="font-semibold btn-hover"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+
+              <!-- Office Info -->
+              <div class="scroll-reveal">
+                <h2 style="color: ${primaryColor}; font-family: ${customFont}, ${serifFontStack}; font-size: ${baseSize * 2}px;" class="font-bold mb-6">
+                  Visit Our Office
+                </h2>
+                
+                <div style="background-color: ${surfaceColor}; border: 1px solid rgba(0,0,0,0.1);" class="p-8 rounded-lg shadow-lg mb-6">
+                  <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                      <div style="background-color: ${accentColor}; width: 50px; height: 50px;" class="rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-map-marker-alt" style="color: ${primaryColor}; font-size: ${baseSize * 1.3}px;"></i>
+                      </div>
+                      <div>
+                        <h3 style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.2}px;" class="font-bold mb-2">
+                          Address
+                        </h3>
+                        <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;" class="opacity-80">
+                          ${config.contact_address || defaultConfig.contact_address}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                      <div style="background-color: ${accentColor}; width: 50px; height: 50px;" class="rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-clock" style="color: ${primaryColor}; font-size: ${baseSize * 1.3}px;"></i>
+                      </div>
+                      <div>
+                        <h3 style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.2}px;" class="font-bold mb-2">
+                          Office Hours
+                        </h3>
+                        <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;" class="opacity-80">
+                          ${config.office_hours || defaultConfig.office_hours}
+                        </p>
+                        <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-60 mt-1">
+                          Saturday & Sunday: Closed
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                      <div style="background-color: ${accentColor}; width: 50px; height: 50px;" class="rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-phone-volume" style="color: ${primaryColor}; font-size: ${baseSize * 1.3}px;"></i>
+                      </div>
+                      <div>
+                        <h3 style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.2}px;" class="font-bold mb-2">
+                          Phone
+                        </h3>
+                        <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;" class="opacity-80">
+                          ${config.contact_phone || defaultConfig.contact_phone}
+                        </p>
+                        <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;" class="opacity-80">
+                          ${config.contact_mobile || defaultConfig.contact_mobile}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                      <div style="background-color: ${accentColor}; width: 50px; height: 50px;" class="rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-envelope-open" style="color: ${primaryColor}; font-size: ${baseSize * 1.3}px;"></i>
+                      </div>
+                      <div>
+                        <h3 style="color: ${primaryColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.2}px;" class="font-bold mb-2">
+                          Email
+                        </h3>
+                        <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;" class="opacity-80 break-all">
+                          ${config.contact_email || defaultConfig.contact_email}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quick Action Buttons -->
+                <div class="space-y-3">
+                  <a href="https://wa.me/${config.contact_whatsapp || defaultConfig.contact_whatsapp}" target="_blank" rel="noopener noreferrer" style="background-color: #25D366; color: white; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;" class="w-full px-6 py-4 rounded font-semibold btn-hover flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-3" style="font-size: ${baseSize * 1.3}px;"></i>
+                    Chat on WhatsApp
+                  </a>
+                  
+                  <a href="tel:${config.contact_phone || defaultConfig.contact_phone}" style="background-color: ${primaryColor}; color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;" class="w-full px-6 py-4 rounded font-semibold btn-hover flex items-center justify-center">
+                    <i class="fas fa-phone mr-3"></i>
+                    Call Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Map Section -->
+        <section style="background-color: ${surfaceColor};" class="py-20">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+              <h2 style="color: ${primaryColor}; font-family: ${customFont}, ${serifFontStack}; font-size: ${baseSize * 2.5}px;" class="font-bold mb-4">
+                Find Us on the Map
+              </h2>
+              <p style="color: ${textColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px;" class="opacity-80">
+                Located in the heart of Giyani for easy access
+              </p>
+            </div>
+            
+            <div class="rounded-lg overflow-hidden shadow-xl">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.123456789012!2d30.718!3d-23.301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDE4JzAzLjYiUyAzMMKwNDMnMDQuOCJF!5e0!3m2!1sen!2sza!4v1234567890123" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gold Separator -->
+        <div style="background-color: ${accentColor}; height: 4px;"></div>
+
+        <!-- Footer -->
+        <footer style="background-color: ${primaryColor};" class="py-16">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+              <!-- Logo and About -->
+              <div class="md:col-span-1">
+                <div class="flex items-center space-x-3 mb-4">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="${accentColor}"/>
+                    <path d="M12 28V12L20 18L28 12V28H12Z" fill="${primaryColor}"/>
+                    <circle cx="20" cy="20" r="3" fill="${surfaceColor}"/>
+                  </svg>
+                  <span style="color: ${surfaceColor}; font-family: ${customFont}, ${serifFontStack}; font-size: ${baseSize * 1.2}px;" class="font-bold">${config.firm_name || defaultConfig.firm_name}</span>
+                </div>
+                <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75 leading-relaxed">
+                  Professional legal services with integrity and excellence.
+                </p>
+              </div>
+
+              <!-- Quick Links -->
+              <div>
+                <h4 style="color: ${accentColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px;" class="font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                  <li><a href="index.html" style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75 hover:opacity-100 transition-opacity">Home</a></li>
+                  <li><a href="about.html" style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75 hover:opacity-100 transition-opacity">About Us</a></li>
+                  <li><a href="services.html" style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75 hover:opacity-100 transition-opacity">Our Services</a></li>
+                  <li><a href="contact.html" style="color: ${accentColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-100 font-semibold">Contact</a></li>
+                </ul>
+              </div>
+
+              <!-- Services -->
+              <div>
+                <h4 style="color: ${accentColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px;" class="font-bold mb-4">Practice Areas</h4>
+                <ul class="space-y-2">
+                  <li style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75">Corporate Law</li>
+                  <li style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75">Property Law</li>
+                  <li style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75">Family Law</li>
+                  <li style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px;" class="opacity-75">Litigation</li>
+                </ul>
+              </div>
+
+              <!-- Contact Info -->
+              <div>
+                <h4 style="color: ${accentColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px;" class="font-bold mb-4">Contact Us</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-phone" style="color: ${accentColor}; margin-top: 4px;"></i>
+                    <div>
+                      <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;" class="opacity-75">${config.contact_phone || defaultConfig.contact_phone}</p>
+                      <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;" class="opacity-75">${config.contact_mobile || defaultConfig.contact_mobile}</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-envelope" style="color: ${accentColor}; margin-top: 4px;"></i>
+                    <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;" class="opacity-75 break-all">${config.contact_email || defaultConfig.contact_email}</p>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-map-marker-alt" style="color: ${accentColor}; margin-top: 4px;"></i>
+                    <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;" class="opacity-75">${config.contact_address || defaultConfig.contact_address}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t" style="border-color: rgba(255,255,255,0.1);">
+              <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;" class="opacity-75 text-center md:text-left">
+                  © 2024 ${config.firm_name || defaultConfig.firm_name}. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                  <a href="#" style="color: ${surfaceColor};" class="opacity-75 hover:opacity-100 transition-opacity">
+                    <i class="fab fa-facebook-f" style="font-size: ${baseSize * 1.2}px;"></i>
+                  </a>
+                  <a href="#" style="color: ${surfaceColor};" class="opacity-75 hover:opacity-100 transition-opacity">
+                    <i class="fab fa-twitter" style="font-size: ${baseSize * 1.2}px;"></i>
+                  </a>
+                  <a href="#" style="color: ${surfaceColor};" class="opacity-75 hover:opacity-100 transition-opacity">
+                    <i class="fab fa-linkedin-in" style="font-size: ${baseSize * 1.2}px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      `;
+
+      // Sidebar functionality
+      const sidebar = document.getElementById('sidebar');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+      const openSidebar = document.getElementById('openSidebar');
+      const closeSidebar = document.getElementById('closeSidebar');
+      
+      openSidebar.addEventListener('click', () => {
+        sidebar.classList.add('open');
+        sidebarOverlay.classList.add('open');
+      });
+      
+      closeSidebar.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        sidebarOverlay.classList.remove('open');
+      });
+      
+      sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        sidebarOverlay.classList.remove('open');
+      });
+      
+      // Close sidebar when clicking links
+      document.querySelectorAll('.sidebar-link').forEach(link => {
+        link.addEventListener('click', () => {
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('open');
+        });
+      });
+
+      // Scroll reveal animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Contact Form Handling
+      const contactForm = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.style.opacity = '0.7';
+
+        // Simulate form submission (in a real app, this would send to a server)
+        setTimeout(() => {
+          // Show success toast
+          showToast('Message sent successfully! We\'ll get back to you soon.', 'success');
+          
+          // Reset form
+          contactForm.reset();
+          
+          // Re-enable button
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+          submitBtn.style.opacity = '1';
+        }, 1500);
+      });
+
+      function showToast(message, type) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.style.backgroundColor = type === 'success' ? '#10b981' : '#ef4444';
+        toast.style.color = 'white';
+        toast.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}" style="font-size: ${baseSize * 1.3}px;"></i>
+            <span style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize}px;">${message}</span>
+          </div>
+        `;
+        
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+          toast.classList.add('show');
+        }, 100);
+        
+        setTimeout(() => {
+          toast.classList.remove('show');
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 300);
+        }, 4000);
+      }
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["firm_name", config.firm_name || defaultConfig.firm_name],
+        ["page_title", config.page_title || defaultConfig.page_title],
+        ["page_subtitle", config.page_subtitle || defaultConfig.page_subtitle],
+        ["contact_phone", config.contact_phone || defaultConfig.contact_phone],
+        ["contact_mobile", config.contact_mobile || defaultConfig.contact_mobile],
+        ["contact_whatsapp", config.contact_whatsapp || defaultConfig.contact_whatsapp],
+        ["contact_email", config.contact_email || defaultConfig.contact_email],
+        ["contact_address", config.contact_address || defaultConfig.contact_address],
+        ["office_hours", config.office_hours || defaultConfig.office_hours]
+      ]);
+    }
+
+    // Initialize SDK and render
+    async function initializeApp() {
+      if (window.elementSdk) {
+        await window.elementSdk.init({
+          defaultConfig,
+          onConfigChange,
+          mapToCapabilities,
+          mapToEditPanelValues
+        });
+      } else {
+        await onConfigChange(defaultConfig);
+      }
+    }
+    
+    initializeApp();
+  </script>
+ </body>
+</html>
