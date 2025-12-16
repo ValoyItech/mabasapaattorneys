@@ -655,9 +655,22 @@
             <!-- Bottom Bar -->
             <div class="pt-8 border-t" style="border-color: rgba(255,255,255,0.1);">
               <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <p style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;" class="opacity-75 text-center md:text-left">
-                  © 2024 ${config.firm_name || defaultConfig.firm_name}. All rights reserved.
-                </p>
+                <p
+  style="color: ${surfaceColor}; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px;"
+  class="opacity-75 text-center md:text-left"
+>
+  © 2024 ${config.firm_name || defaultConfig.firm_name}. 
+  <a
+    href="https://www.valoyitech.co.za/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="color: ${accentColor};"
+    class="hover:opacity-80"
+  >
+    By ValoyItech
+  </a>
+</p>
+
                 <div class="flex space-x-6">
                   <a href="#" style="color: ${surfaceColor};" class="opacity-75 hover:opacity-100 transition-opacity">
                     <i class="fab fa-facebook-f" style="font-size: ${baseSize * 1.2}px;"></i>
